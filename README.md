@@ -43,7 +43,7 @@
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone <https://github.com/SRIKRISHNAN-TR/MediAuth.git>
 cd MedAuth
 
 # Install backend dependencies
