@@ -41,6 +41,15 @@ app.use(express.urlencoded({ extended: true }));
 // Serve uploaded files statically
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
+// Welcome / Root check
+app.get('/', (_req, res) => {
+  res.json({
+    status: 'ok',
+    message: 'MediAuth AI Backend is running smoothly 🚀',
+    healthCheck: '/api/health'
+  });
+});
+
 // Health check
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', service: 'MediAuth AI Backend', timestamp: new Date().toISOString() });
